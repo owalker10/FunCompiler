@@ -1,10 +1,10 @@
 # FunCompiler
-Takes programs written in simple language and compiles an assembly file.
-Written for an assignment in CS 429H Honors Computer Organization and Architecture.
+Takes programs written in simple language and compiles an assembly file. Written for an assignment in CS 429H Honors Computer Organization and Architecture.
 
 
-The compiler looks for a file named <name>.fun and compiles it,
-producing an executable file named <name>
+
+The compiler looks for a file named \<name>.fun and compiles it,
+producing an executable file named \<name>
 
 For example:
 
@@ -18,7 +18,7 @@ running "./p4 tx" produces a file named tx
 running "./tx" prints 1
 running "./tx hello" prints 2
 
-"make clean <name>.test" compiles and runs <name>.fun and compares the result to <name>.ok and passes or fails the test.
+"make clean \<name>.test" compiles and runs \<name>.fun and compares the result to \<name>.ok and passes or fails the test.
 
 ## The Fun Langauge:
 
