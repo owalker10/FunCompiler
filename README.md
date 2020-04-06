@@ -31,13 +31,13 @@ running "./tx hello" prints 2
   * identifiers: start with lower case letters followed by a sequence of
                  lower case letters and numbers.
 
-         examples: x hello h123 xy3yt abc123
+     examples: x hello h123 xy3yt abc123
 
   * immediate values: sequences of digits representing integers. They always
                  start with a digit but could contain '_' characters that are
                  ignored
 
-         examples: 12 0 12_234
+     examples: 12 0 12_234
 
 - Syntax: Our syntax is C-like. You're given most of the code
   but you need to change it in order to implement the "if" and "while"
@@ -47,8 +47,7 @@ running "./tx hello" prints 2
 
   * the following operators are supported '*', '+', '=='
 
-Language semantics:
-~~~~~~~~~~~~~~~~~~~
+### Language semantics:
 
 - All variables are 64 bit unsigned integers
 
@@ -63,17 +62,17 @@ Language semantics:
 
 - The 'if' statement has one of the forms:
 
-     if <exp> <statement>
+      if <exp> <statement>
      
    or
  
-     if <exp> <statement> else <statement>
+      if <exp> <statement> else <statement>
 
    <exp> is considered true if it evaluates to a non-zero value, false otherwise
 
 - The 'while' statement has the form:
 
-    while <exp> <statement>
+      while <exp> <statement>
 
    <exp> is considered true if it evaluates to a non-zero value, false otherwise
 
@@ -82,18 +81,18 @@ Language semantics:
 
 - The 'print' statement has the form:
 
-    print <exp>
+      print <exp>
 
   It prints the numerical value of the expression followed by a new line
 
 
 
-Defining a function:
-~~~~~~~~~~~~~~~~~~~~
+### Defining a function:
+
 
 The function expression is as follows:
 
-   fun <statement>
+    fun <statement>
 
 A "fun" expression returns an opaque 64 bit quantity. The only meaningful
 thing you can do with the result is to store in a variable and use it later
@@ -103,24 +102,23 @@ quantity.
 
 For example:
 
-  x = fun print 125
+    x = fun print 125
 
-    defines a function with "print 125" as its body and stores its handle in "x"
+   defines a function with "print 125" as its body and stores its handle in "x"
 
-  y = fun {
-        abc = 100
-        pqr = 200
-      }    
+    y = fun {
+          abc = 100
+          pqr = 200
+        }    
 
-    defines a function that sets the values of "abc" and "pqr" and stores its
-    handle in "y"
+   defines a function that sets the values of "abc" and "pqr" and stores its
+   handle in "y"
 
 Calling a function:
-~~~~~~~~~~~~~~~~~~~
 
    A call statement is added to the language:
 
-       <identitifer> ()
+    <identitifer> ()
 
    <identitifer> has to contain a value returned by "fun".
 
