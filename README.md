@@ -1,6 +1,5 @@
 # FunCompiler
-Takes programs written in simple language and compiles an assembly file. Written for an assignment in CS 429H Honors Computer Organization and Architecture.
-
+Takes programs written in simple language and compiles an assembly file.
 
 
 The compiler looks for a file named \<name>.fun and compiles it,
